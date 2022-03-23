@@ -139,6 +139,9 @@ h1 {
   .teamLogo {
       width: 200px;
   }
+  .uncteamLogo {
+    width: 220px;
+}
 
   .buttonContainer {
     width: 100%;
