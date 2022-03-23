@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Team } from '../team';
+import { MarchMadness, Team } from '../marchmadness';
 import { OddsService } from '../odds.service';
-import axios from 'axios';
-import { ActionSequence } from 'protractor';
 
 @Component({
   selector: 'app-odds',
@@ -14,32 +12,45 @@ export class OddsComponent implements OnInit {
   
 
   teams: Team[] = [];
-
+  unc: Team;
+  duke: Team;
+  marchmadness: MarchMadness;
   constructor(private oddsService: OddsService) { 
   }
 
-  scrapeTeams(): void {
-    const url = 'https://projects.fivethirtyeight.com/2022-march-madness-predictions/';
-    const AxiosInstance = axios.create();
+//  getStreamers(): void {
+//   this.oddsService.scrapeTeams()
+//   .subscribe((value: string) => {
+//     console.log(`Name: ${value}`)
+//   })
+//  }
 
-    AxiosInstance.get(url)
-  .then( // Once we have data returned ...
-    response => {
-      const html = response.data; // Get the HTML from the HTTP request
-      console.log(html);
-    }
-  )
-  .catch(console.error); // Error handling
+  getData(): void {
+    this.oddsService.scrapeTeams()
+      .subscribe((marchmadness: MarchMadness) => {
+        this.marchmadness = marchmadness
+        this.getTeams(this.marchmadness)
+      });
+
   }
 
-  getTeams(): void {
-    this.oddsService.getTeams()
-      .subscribe(teams => this.teams = teams);
+  getTeams(mmdata: MarchMadness): void{
+    this.teams = mmdata.forecasts.mens['current_run'].teams
+    this.getUNCDuke(this.teams)
+  }
+
+  getUNCDuke(teams: Team[]): void{
+    for (var team of teams) {
+      if (team.team_name == "North Carolina") {
+        this.unc = team;
+      }else if (team.team_name == "Duke")
+      this.duke = team;
+    }
   }
 
   ngOnInit(): void{
-    this.getTeams();
-    this.scrapeTeams();
+    this.getData();
+   // this.getStreamers();
   }
 
 }

@@ -1,1 +1,202 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Bebas+Neue&display=swap');
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+
+/* Application-wide Styles */
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 450%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  h2 {
+    width: 40%;
+  }
+}
+
+
+@media screen and (max-width: 1999px) {
+  h2 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: xx-large;
+  }
+}
+
+/* @media only screen and (orientation:landscape) {
+  h2 {
+    top:45%;
+  }
+}
+
+@media screen and (orientation:portrait) {
+  h2 {
+    top:24%;
+  }
+} */
+
+h1 {
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+  }
+  h2, h3 {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: large;
+    position: absolute;
+    
+    z-index: 999;
+    text-align:center;
+    left: 0;
+    right: 0;
+    top: 20%;
+    margin: 0 auto;
+    /* top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    text-shadow: 1px 1px black;
+  }
+
+  @media screen and (min-width: 801px) {
+    h2,h3 {
+      font-size: xx-large;
+    }
+    img.mouse{
+      width: 25px;
+    }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 800px) {
+    h2,h3 {
+      font-size: large;
+    }
+    img.mouse{
+      width: 25px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h2,h3 {
+      font-size: x-small;
+    }
+    img.mouse{
+      width: 15px;
+    }
+
+  }
+
+  h4 {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  body {
+    margin: 2em;
+    background-color: white;
+  }
+  body, input[type="text"], button {
+    color: #333;
+    font-family: Cambria, Georgia;
+  }
+  /* everywhere else */
+  * {
+    font-family: Roboto, sans-serif;
+  }
+
+  img.petesImage {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+  }
+
+  .box {
+    position: relative;
+    /* display: inline-block; */
+
+  }
+
+  .teamLogo {
+      width: 200px;
+  }
+
+  .buttonContainer {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 25px;
+  }
+
+  .unc {
+      margin-right: 150px;
+      text-align: center;
+  }
+
+  .duke{
+    margin-left: 150px;
+    text-align: center;
+  }
+  button {
+    
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+  }
+
+  .dukeodds{
+    color: #012169;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+  }
+  .uncodds{
+    color: #4B9CD3;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+  }
+
+  .quoteGraphic {
+    font-family: serif;
+    font-size: larger;
+    color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 60%;
+    width: 100px;
+  }
+
+  hr {
+    /* border-top: 1px solid#e4e3e3; */
+    border: none;
+    height: 1px;
+    color: #e4e3e3;
+    background-color: #e4e3e3;
+  }
+  .collision{
+      text-align:center;
+  }
+  .collisionOdds {
+    font-size: 100px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(92deg, #fe8f19, #e41429);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+  }
+
+  @-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-50deg);
+    }
+  }

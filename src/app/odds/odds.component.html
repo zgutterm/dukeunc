@@ -1,5 +1,41 @@
-  <h1>Teams</h1>
-  <li *ngFor="let team of teams">
-    {{team.id}} {{team.name}} - {{team.ffodds}}
-  </li>
+<div style="text-align:center">
+  <div class="container">
+  <h1>
+   NCAA Tournament Doomsday Clock
+  </h1>
+  <hr/>
+  </div>
+</div>
+<br />
+<br />
+ <div *ngIf="marchmadness">
+  
+ 
+ 
 
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-auto">
+        <div class="unc">
+          <img class="teamLogo" src="../assets/{{unc.team_id}}.png"/> 
+         <h1> {{unc.team_name}} </h1>
+         <span class="uncodds">{{unc.rd5_win * 100| number : '1.2-2'}}%</span>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="collision">
+          <span class="collisionOdds">{{unc.rd5_win * 100 * duke.rd5_win| number : '1.2-2'}}%</span>
+        </div>
+
+      </div>
+      <div class="col-md-auto">
+        <div class="duke">
+          <img class="teamLogo" src="../assets/{{duke.team_id}}.png"/>
+          <h1>{{duke.team_name}}</h1>
+          <span class="dukeodds">{{duke.rd5_win * 100| number : '1.2-2'}}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

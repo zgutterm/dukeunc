@@ -4,13 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { OddsComponent } from './odds/odds.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     OddsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
