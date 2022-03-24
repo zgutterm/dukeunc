@@ -10,10 +10,6 @@
 <br />
 <br />
  <div *ngIf="marchmadness">
-  
- 
- 
-
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-auto">
@@ -25,7 +21,7 @@
       </div>
       <div class="col-3">
         <div class="collision">
-          <a target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><span class="collisionOdds">{{unc.rd5_win * 100 * duke.rd5_win| number : '1.2-2'}}%</span></a>
+          <a class="collisionLink" target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><span class="collisionOdds">{{unc.rd5_win * 100 * duke.rd5_win| number : '1.2-2'}}%</span></a>
         </div>
 
       </div>
