@@ -212,20 +212,27 @@ h1 {
       text-align:center;
   }
   .collisionOdds {
-    
-    font-size: 100px;
+    background-image: url(https://media.giphy.com/media/3o85xJY1FaLzqeoBGw/giphy-downsized-large.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin: 10px 0;
+    /* font-size: 100px;
     text-align: center;
     background-image: -webkit-linear-gradient(92deg, #fe8f19, #e41429);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	-webkit-animation: hue 20s infinite linear;
+	-webkit-animation: hue 20s infinite linear; */
   }
 
-  @-webkit-keyframes hue {
+  /* @-webkit-keyframes hue {
     from {
       -webkit-filter: hue-rotate(0deg);
     }
     to {
       -webkit-filter: hue-rotate(-80deg);
-    }
-  }
+    } */
+  /* } */
