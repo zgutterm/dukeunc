@@ -211,7 +211,9 @@ h1 {
   .collision{
       text-align:center;
   }
+  
   .collisionOdds {
+      
     background-image: url(https://media.giphy.com/media/3o85xJY1FaLzqeoBGw/giphy-downsized-large.gif);
   background-size: cover;
   color: transparent;
