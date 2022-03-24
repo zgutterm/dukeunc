@@ -207,6 +207,7 @@ h1 {
     height: 1px;
     color: #e4e3e3;
     background-color: #e4e3e3;
+    opacity: 80%;
   }
   .collision{
       text-align:center;
