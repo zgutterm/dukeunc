@@ -12,8 +12,12 @@
     <div class="row align-items-center">
       
       <div class="col">
-        <div class="collision">
-          <a class="collisionLink" target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><span class="collisionOdds">{{unc.rd5_win * 100 * duke.rd5_win| number : '1.1-1'}}%</span></a>
+        <div [ngClass]="{'heartbeat00': (unc.rd5_win * 100 * duke.rd5_win) < 42,
+                 'heartbeat50': (unc.rd5_win * 100 * duke.rd5_win) >= 42 && (unc.rd5_win * 100 * duke.rd5_win) < 70,
+                 'heartbeat75': (unc.rd5_win * 100 * duke.rd5_win) >= 70 && (unc.rd5_win * 100 * duke.rd5_win) < 90,  
+                 'heartbeat90': (unc.rd5_win * 100 * duke.rd5_win) >= 90 && (unc.rd5_win * 100 * duke.rd5_win) < 100,
+                 'heartbeat100': (unc.rd5_win * 100 * duke.rd5_win) >90}">
+          <a class="collisionLink" target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><div class="collisionOdds">{{unc.rd5_win * 100 * duke.rd5_win| number : '1.1-1'}}%</div></a>
         </div>
       </div>
     </div>

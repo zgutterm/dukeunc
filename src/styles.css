@@ -211,6 +211,40 @@ h1 {
   }
   .collision{
       text-align:center;
+      /* animation: beat .86s infinite;
+      transform-origin: center; */
+
+  }
+  .heartbeat00{
+    text-align:center;
+
+  }
+
+  .heartbeat50{
+    text-align:center;
+
+    animation: beat .86s infinite;
+    transform-origin: center;
+  }
+  .heartbeat75{
+    text-align:center;
+
+    animation: beat .76s infinite;
+    transform-origin: center;
+  }
+
+  .heartbeat90{
+    text-align:center;
+
+    animation: beat .56s infinite;
+    transform-origin: center;
+  }
+
+  .heartbeat100{
+    text-align:center;
+
+    animation: beat .46s infinite;
+    transform-origin: center;
   }
   
   .collisionOdds {
@@ -223,19 +257,34 @@ h1 {
   text-transform: uppercase;
   font-size: 110px;
   margin: 10px 0;
-    /* font-size: 100px;
-    text-align: center;
-    background-image: -webkit-linear-gradient(92deg, #fe8f19, #e41429);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: hue 20s infinite linear; */
+
+
   }
 
-  /* @-webkit-keyframes hue {
-    from {
-      -webkit-filter: hue-rotate(0deg);
-    }
-    to {
-      -webkit-filter: hue-rotate(-80deg);
-    } */
-  /* } */
+  @keyframes beat
+{
+  0%
+  {
+    transform: scale( .99 );
+  }
+  18%
+  {
+    transform: scale( 1 );
+  }
+  36%
+  {
+    transform: scale( .99 );
+  }
+  54%
+  {
+    transform: scale( 1 );
+  }
+  72%
+  {
+    transform: scale( .99 );
+  }
+  100%
+  {
+    transform: scale( .99 );
+  }
+}
