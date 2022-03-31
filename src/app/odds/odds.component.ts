@@ -17,6 +17,7 @@ export class OddsComponent implements OnInit {
   teams: Team[] = [];
   unc: Team;
   duke: Team;
+  uncwin = false;
   liveWinner: string;
   marchmadness: MarchMadness;
   size = window.innerWidth - 50;
@@ -79,12 +80,10 @@ export class OddsComponent implements OnInit {
   }
   findWinner(): void{
     var uncwinpct = this.unc.rd6_win;
-    if (uncwinpct > .50) {
-      this.liveWinner = "UNC";
-    } else if (uncwinpct < .50) {
-      this.liveWinner = "DUKE";
+    if (uncwinpct >= 1) {
+     this.uncwin = true;
     }else {
-      this.liveWinner = "EVEN"
+      this.uncwin = false;
     }
 
   }
@@ -106,6 +105,7 @@ export class OddsComponent implements OnInit {
     this.surprise();
 
   }
+
 
 
   getUNCDuke(teams: Team[]): void{
