@@ -1,41 +1,60 @@
 <div style="text-align:center">
   <div class="container">
   <h1>
-   NCAA Tournament Doomsday
+   NCAA Tournament <span class="apocalypseSlogan">Doomsday</span>
   </h1>
-  <h4>The odds that UNC and Duke play each other in the NCAA Tournament</h4>
+  <h4>The odds of the UNC and Duke Final Four game</h4>
   <hr/>
   </div>
 </div>
  <div *ngIf="marchmadness">
+
   <div class="container">
     <div class="row align-items-center">
       
       <div class="col">
-        <div [ngClass]="{'heartbeat00': (unc.rd5_win * 100 * duke.rd5_win) < 42,
+        <!-- <div [ngClass]="{'heartbeat00': (unc.rd5_win * 100 * duke.rd5_win) < 42,
                  'heartbeat50': (unc.rd5_win * 100 * duke.rd5_win) >= 42 && (unc.rd5_win * 100 * duke.rd5_win) < 70,
                  'heartbeat75': (unc.rd5_win * 100 * duke.rd5_win) >= 70 && (unc.rd5_win * 100 * duke.rd5_win) < 90,  
                  'heartbeat90': (unc.rd5_win * 100 * duke.rd5_win) >= 90 && (unc.rd5_win * 100 * duke.rd5_win) < 100,
                  'heartbeat100': (unc.rd5_win * 100 * duke.rd5_win) >90}">
-          <a class="collisionLink" target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><div class="collisionOdds">{{unc.rd5_win * 100 * duke.rd5_win| number : '1.0-0'}}%</div></a>
+          <a class="collisionLink" target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><div class="collisionOdds">!!!</div></a>
+          <br/>
+          
+        </div> -->
+        <div (window:resize)="resizeGauge()" class="gaugeClass">
+          <ngx-gauge type="semi" value="{{unc.rd6_win * 100 | number : '1.1-1'}}" thick="25" foregroundColor="#4B9CD3" backgroundColor="#012169" append="%" [size]="size">
+        </ngx-gauge>
         </div>
       </div>
     </div>
+    <div class="row align-items-center">
       </div>
-      <div class="row">
+      <div class="row teamRow">
         <div class="col">
           <div class="unc">
-            <img class="uncteamLogo" src="../assets/{{unc.team_id}}.png"/> 
-          <h1> UNC </h1>
-          <div class="uncodds">{{unc.rd5_win * 100| number : '1.2-2'}}%</div>
+           <div class="uncLogo"> <img class="uncteamLogo" src="../assets/{{unc.team_id}}.png"/> </div>
+            <div [ngClass]="{'teamName': (unc.rd6_win * 100) <= 50,
+              'teamNameWinning': (unc.rd6_win * 100) > 50}">
+       UNC</div>
+          <div class="uncodds">{{unc.rd6_win * 100 | number : '1.2-2'}}%</div>
           </div>
         </div>
         <div class="col">
           <div class="duke">
             <img class="teamLogo" src="../assets/{{duke.team_id}}.png"/>
-            <h1>{{duke.team_name}}</h1>
-            <span class="dukeodds">{{duke.rd5_win * 100| number : '1.2-2'}}%</span>
+            <div [ngClass]="{'teamName': (unc.rd6_win * 100) >= 50,
+                 'teamNameWinning': (unc.rd6_win * 100) < 50}">
+          {{duke.team_name}}</div>
+            <span class="dukeodds">{{duke.rd6_win * 100 | number : '1.2-2'}}%</span>
+            
           </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col">
+          
         </div>
       </div>
 </div>

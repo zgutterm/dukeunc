@@ -92,6 +92,7 @@ h1 {
     h2,h3 {
       font-size: large;
     }
+
     img.uncteamLogo{
         width: 130px;
       }
@@ -108,6 +109,9 @@ h1 {
     
     .uncodds {
         font-size: 10px;
+    }
+    .heartbeat100{
+      font-size: 50px;
     }
    
     img.uncteamLogo{
@@ -175,7 +179,9 @@ h1 {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
   }
-
+  .winchart{
+    text-align: center;
+  }
   .dukeodds{
     color: #012169;
     font-family: 'Bebas Neue', sans-serif;
@@ -246,7 +252,63 @@ h1 {
     animation: beat .46s infinite;
     transform-origin: center;
   }
+
+  ngx-gauge div.reading-block { margin-top: 70px; font-size: 80px !important; transform: translateY(87.36px); }
+
+  .reading-label{
+    display: none;
+  }
+  .reading-block{
+    display: none;
+  }
+  .uncTeamNameWinning{
+    font-family: 'Bebas Neue', sans-serif;
+    background-image: url(./assets/flames.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    animation: beat .46s infinite;
+  }
+
+  .teamName{
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: calc(1.375rem + 1.5vw);
+  }
+
+  .teamRow{
+    margin-top: -70px;
+  }
+
+  .apocalypseSlogan{
+    font-family: 'Bebas Neue', sans-serif;
+    background-image: url(./assets/flames.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+  }
+
+  .teamNameWinning{
+    font-family: 'Bebas Neue', sans-serif;
+    background-image: url(./assets/flames.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    animation: beat .46s infinite;
+    font-size: calc(1.375rem + 1.5vw);
+  }
   
+  .gaugeClass{
+    text-align: center;
+  }
+
   .collisionOdds {
       
     background-image: url(./assets/flames.gif);
