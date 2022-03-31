@@ -182,6 +182,26 @@ h1 {
   .winchart{
     text-align: center;
   }
+
+  .uncwinscreen{
+    text-align: center;
+
+  }
+
+  .uncWinText{
+    color: #4B9CD3;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+  }
+
+  .dukeLostText{
+    color: #012169;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: xx-large;
+  }
+
   .dukeodds{
     color: #012169;
     font-family: 'Bebas Neue', sans-serif;
@@ -270,6 +290,7 @@ h1 {
     -webkit-background-clip: text;
     text-transform: uppercase;
     animation: beat .46s infinite;
+    font-size: calc(1.375rem + 1.5vw);
   }
 
   .teamName{

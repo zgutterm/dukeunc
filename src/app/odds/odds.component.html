@@ -7,25 +7,17 @@
   <hr/>
   </div>
 </div>
- <div *ngIf="marchmadness">
-
+<div *ngIf="marchmadness">
+  
   <div class="container">
     <div class="row align-items-center">
       
       <div class="col">
-        <!-- <div [ngClass]="{'heartbeat00': (unc.rd5_win * 100 * duke.rd5_win) < 42,
-                 'heartbeat50': (unc.rd5_win * 100 * duke.rd5_win) >= 42 && (unc.rd5_win * 100 * duke.rd5_win) < 70,
-                 'heartbeat75': (unc.rd5_win * 100 * duke.rd5_win) >= 70 && (unc.rd5_win * 100 * duke.rd5_win) < 90,  
-                 'heartbeat90': (unc.rd5_win * 100 * duke.rd5_win) >= 90 && (unc.rd5_win * 100 * duke.rd5_win) < 100,
-                 'heartbeat100': (unc.rd5_win * 100 * duke.rd5_win) >90}">
-          <a class="collisionLink" target="_blank" href="https://projects.fivethirtyeight.com/2022-march-madness-predictions"><div class="collisionOdds">!!!</div></a>
-          <br/>
-          
-        </div> -->
         <div (window:resize)="resizeGauge()" class="gaugeClass">
           <ngx-gauge type="semi" value="{{unc.rd6_win * 100 | number : '1.1-1'}}" thick="25" foregroundColor="#4B9CD3" backgroundColor="#012169" append="%" [size]="size">
         </ngx-gauge>
         </div>
+   
       </div>
     </div>
     <div class="row align-items-center">
@@ -55,7 +47,10 @@
       <div class="row">
 
         <div class="col">
-          
+          <div class="uncwinscreen" *ngIf="uncwin">
+            <span class="uncWinText">HARK THE SOUND</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="dukeLostText">FUCK DUKE</span>
+          </div>
         </div>
       </div>
+      
 </div>
